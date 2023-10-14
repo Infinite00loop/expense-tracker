@@ -30,24 +30,24 @@ function tracker(){
 
 
 
-// function removeElement(e){
-//     if(e.target.classList.contains('delete')){
-//         if(confirm('Are you sure to delete ?')){
-//             var li=e.target.parentElement;
+function removeElement(e){
+    if(e.target.classList.contains('delete')){
+        if(confirm('Are you sure to delete ?')){
+            var li=e.target.parentElement;
            
-//             var email=li.textContent.split(" - ")[1];
-//             localStorage.removeItem(description);
-//             list.removeChild(li);
-//         }
-//     }
-//     else if(e.target.classList.contains('edit')){
-//         var li=e.target.parentElement;
-//         const arr=li.textContent.split(" - " );
-//         var email=arr[1];
-//         localStorage.removeItem(email);
-//         document.getElementById('id1').value=arr[0];
-//         document.getElementById('id2').value=arr[1];
-//         document.getElementById('id3').value=arr[3];
-//         list.removeChild(li);
-//     }
+            var description=li.textContent.split(" - ")[1];
+            localStorage.removeItem(description);
+            list.removeChild(li);
+        }
+    }
+    else if(e.target.classList.contains('edit')){
+        var li=e.target.parentElement;
+        const arr=li.textContent.split(" - " );
+        var description=arr[1];
+        localStorage.removeItem(description);
+        document.getElementById('id1').value=arr[0];
+        document.getElementById('id2').value=arr[1];
+        document.getElementById('id3').value=arr[2];
+        list.removeChild(li);
+    }
 }
