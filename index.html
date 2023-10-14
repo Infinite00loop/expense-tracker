@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label>Choose expense amount</label>
+        <input type="number" id="id1">
+        <label>Choose description</label>
+        <input type="text" id="id2">
+        <label >Choose a category</label>
+        <select name="category" id="id3">
+            <option value="fuel">fuel</option>
+            <option value="food">food</option>
+            <option value="electricity">electricity</option>
+            <option value="movies">movies</option>
+        <input onclick="tracker()" type="button" value="Add Expense" id="id4">
+    </form>
+    <ul id="list-items"></ul>
+    <script src="index.js"></script>
+</body>
+</html>
