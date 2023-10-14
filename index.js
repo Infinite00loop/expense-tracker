@@ -1,4 +1,5 @@
 var list=document.getElementById('list-items');
+list.addEventListener('click' ,removeElement);
 function tracker(){
     var expAmount_=document.getElementById('id1').value;
     var desc_=document.getElementById('id2').value;
@@ -15,7 +16,7 @@ function tracker(){
 
     
     var newList=document.createElement('li');
-    var text=expAmount_+" - "+categ_+" - "+desc_+" - ";
+    var text=expAmount_+" - "+desc_+" - "+categ_+" - ";
     newList.appendChild(document.createTextNode(text));
     var delButton=document.createElement('button');
     delButton.className='delete';
@@ -27,6 +28,8 @@ function tracker(){
     newList.appendChild(EditButton);
 
     list.appendChild(newList);
+
+} 
 
 
 
