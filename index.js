@@ -16,14 +16,15 @@ function tracker(){
 
     
     var newList=document.createElement('li');
+    newList.className="list-group-item"
     var text=expAmount_+" - "+desc_+" - "+categ_+" - ";
     newList.appendChild(document.createTextNode(text));
     var delButton=document.createElement('button');
-    delButton.className='delete';
+    delButton.className="btn btn-danger btn-sm delete";
      delButton.appendChild(document.createTextNode('Delete'));
     newList.appendChild(delButton);
     var EditButton=document.createElement('button');
-    EditButton.className='edit';
+    EditButton.className='btn btn-primary edit btn-sm';
      EditButton.appendChild(document.createTextNode('Edit'));
     newList.appendChild(EditButton);
 
