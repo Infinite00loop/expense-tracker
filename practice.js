@@ -39,12 +39,20 @@ function getPost() {
             }, 1000)
         }) 
     }
-   Promise.all([createPost(),createPost(),createPost(),createPost(),updateLastUserActivityTime()]).then(
-    ()=>{
-        getPost();
-        deletePost().then(()=>{
-            (getPost())
-        })
+//    Promise.all([createPost(),createPost(),createPost(),createPost(),updateLastUserActivityTime()]).then(
+//     ()=>{
+//         getPost();
+//         deletePost().then(()=>{
+//             (getPost())
+//         })
 
-    }
-   )
+//     }
+//    )
+
+   async function fun1(){
+    await Promise.all([createPost(),createPost(),createPost(),createPost(),updateLastUserActivityTime()]);
+    getPost();
+    await deletePost();
+    getPost();
+   }
+   fun1();
