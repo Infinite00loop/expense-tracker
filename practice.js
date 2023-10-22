@@ -42,7 +42,9 @@ function getPost() {
    Promise.all([createPost(),createPost(),createPost(),createPost(),updateLastUserActivityTime()]).then(
     ()=>{
         getPost();
-        deletePost().then(getPost());
+        deletePost().then(()=>{
+            (getPost())
+        })
 
     }
    )
